@@ -1,0 +1,48 @@
+1. Download jenkins
+https://www.jenkins.io/download/
+
+2. port 9090
+username and pass same as local system
+
+3. java -jar jenkins.war
+
+4. Admin pass - 5b35e3151a7e4adb857f9ca857a2e631, 7f03b58771494bd58c8ac0e8c6c945a6
+This may also be found at: C:\Users\Shrikant\.jenkins\secrets\initialAdminPassword
+
+5. new admin login details are 
+user: admin
+pass: admin
+
+6. Default servlet container for Jenkins is - jetty, winstone
+
+7. open jenkins - manage jenkins - configure global security - enable sec checkbox should be checked
+
+8. http://localhost:9090/cli/  - download jenkins cli jar and place at any location
+
+9. java -jar jenkins-cli.jar -s http://localhost:9090/ -webSocket help
+
+10. Home directory - C:\windows\system32\config\systemprofile\AppData\Local\Jenkins.jenkins
+
+11. Roles strategy plugin - for managing roles
+
+12. Manage jenkins - configure systems - 
+13. system message - will be shown on the home page of the jenkins
+14. to see system message in html format you need to go to Global configur security and Markup formatter as HTML
+15. No of executors - no of jobs in parallel
+16. New node - can be created which is like another machine. Jobs can be configure to run on specific node. 
+You can go to a particular job - configure - and then select - Restrict where this project can be run - checkbox and give the name of the Node - which is nothing but the label
+17. Quite Period - give some quite period - so that Jenkins will wait
+18. SCM checkout retry count - 
+19. Restrict project naming - you can restrict the name of the project by providing a pattern like Test.*
+20. Global Properties - Environment variables - you can give key and value of the variable and use it as ${key1}
+21. New Item - Give - Buld automatically - give cron expression
+22. To trigger the build from outside - by using an url - select the option - Trigger builds Remotely - you need to provide the Authorization Token - using this Token - you need to create the URL and hit it in a browser, as an example:
+http://localhost:9090/job/ShrikantTest/build?token=1234
+23. Build chain - In ShrikantTest2 project - under Build Triggers - select option "Build after other projects are built" - and select - other Upstream project - ShrikantTest1
+In the Post Build actions - you can select post build action as - build other projects and give the project name as ShrikantTest3
+24. 
+
+
+
+
+
