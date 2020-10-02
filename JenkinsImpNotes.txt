@@ -44,7 +44,7 @@ In the Post Build actions - you can select post build action as - build other pr
 now add readme.txt to your project and check it in to repo
 the build will trigger automatically
 
-25.  
+25.   
 
 
 
