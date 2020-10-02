@@ -40,7 +40,11 @@ You can go to a particular job - configure - and then select - Restrict where th
 http://localhost:9090/job/ShrikantTest/build?token=1234
 23. Build chain - In ShrikantTest2 project - under Build Triggers - select option "Build after other projects are built" - and select - other Upstream project - ShrikantTest1
 In the Post Build actions - you can select post build action as - build other projects and give the project name as ShrikantTest3
-24. 
+24. To trigger the jenkins job - using Git repo - you need to select Poll SCM option and give the cron expression lets say - * * * * * - so that it will poll git repo after every min, 
+now add readme.txt to your project and check it in to repo
+the build will trigger automatically
+
+25.  
 
 
 
